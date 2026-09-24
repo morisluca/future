@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion, AnimatePresence } from "framer-motion";
-import { Shield, Loader2, ArrowRight, Download } from "lucide-react";
+import { Shield, Loader2, ArrowRight, Download, ChartBar } from "lucide-react";
 
 import { useAuth } from "@/lib/auth-context";
 import { useLogin, useRegister } from "@/lib/api-client";
@@ -104,9 +104,8 @@ const isPending =  registerMutation.isPending;
       >
         <div className="flex flex-col items-center mb-8">
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-500/20 mb-6">
-             <img className="w-8 h-8 inline-flex items-center justify-center text-zinc-950 font-bold text-xl" src={`${import.meta.env.BASE_URL}favicon.png`} alt="Logo" />
-          
-          </div>
+              <ChartBar className="h-5 w-5" />
+            </div>
           <h2 className="text-3xl font-display font-bold text-white text-center">
             Create Account
           </h2>
