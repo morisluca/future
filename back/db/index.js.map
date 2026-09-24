@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/db/index.ts"],
+  "sourcesContent": ["import { drizzle } from \"drizzle-orm/node-postgres\";\nimport pg from \"pg\";\nimport * as schema from \"./schema/index.js\";\nimport dotenv from \"dotenv\";\n\ndotenv.config();\n\nconst { Pool } = pg;\n\nif (!process.env.DATABASE_URL) {\n  throw new Error(\n    \"DATABASE_URL must be set. Did you forget to provision a database?\",\n  );\n}\n\nexport const pool = new Pool({ connectionString: process.env.DATABASE_URL });\nexport const db = drizzle(pool, { schema });\n\nexport { usersTable } from \"./schema/users.js\";\nexport { accountsTable } from \"./schema/accounts.js\";\nexport { transactionsTable } from \"./schema/transactions.js\";\nexport { cryptoTransactionsTable, cryptoHoldingsTable } from \"./schema/crypto.js\";\nexport { siteSettingsTable } from \"./schema/settings.js\";\nexport { cardsTable } from \"./schema/cards.js\";\n"],
+  "mappings": "AAAA,SAAS,eAAe;AACxB,OAAO,QAAQ;AACf,YAAY,YAAY;AACxB,OAAO,YAAY;AAEnB,OAAO,OAAO;AAEd,MAAM,EAAE,KAAK,IAAI;AAEjB,IAAI,CAAC,QAAQ,IAAI,cAAc;AAC7B,QAAM,IAAI;AAAA,IACR;AAAA,EACF;AACF;AAEO,MAAM,OAAO,IAAI,KAAK,EAAE,kBAAkB,QAAQ,IAAI,aAAa,CAAC;AACpE,MAAM,KAAK,QAAQ,MAAM,EAAE,OAAO,CAAC;AAE1C,SAAS,kBAAkB;AAC3B,SAAS,qBAAqB;AAC9B,SAAS,yBAAyB;AAClC,SAAS,yBAAyB,2BAA2B;AAC7D,SAAS,yBAAyB;AAClC,SAAS,kBAAkB;",
+  "names": []
+}

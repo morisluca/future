@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/routes/index.ts"],
+  "sourcesContent": ["import { Router, type IRouter } from \"express\";\nimport healthRouter from \"./health.js\";\nimport authRouter from \"./auth.js\";\nimport accountsRouter from \"./accounts.js\";\nimport transactionsRouter from \"./transactions.js\";\nimport transfersRouter from \"./transfers.js\";\nimport cryptoRouter from \"./crypto.js\";\nimport cardsRouter from \"./cards.js\";\nimport adminRouter from \"./admin.js\";\n\nconst router: IRouter = Router();\n\nrouter.use(healthRouter);\nrouter.use(\"/auth\", authRouter);\nrouter.use(\"/accounts\", accountsRouter);\nrouter.use(\"/transactions\", transactionsRouter);\nrouter.use(\"/transfers\", transfersRouter);\nrouter.use(\"/crypto\", cryptoRouter);\nrouter.use(\"/cards\", cardsRouter);\nrouter.use(\"/admin\", adminRouter);\n\nexport default router;\n"],
+  "mappings": "AAAA,SAAS,cAA4B;AACrC,OAAO,kBAAkB;AACzB,OAAO,gBAAgB;AACvB,OAAO,oBAAoB;AAC3B,OAAO,wBAAwB;AAC/B,OAAO,qBAAqB;AAC5B,OAAO,kBAAkB;AACzB,OAAO,iBAAiB;AACxB,OAAO,iBAAiB;AAExB,MAAM,SAAkB,OAAO;AAE/B,OAAO,IAAI,YAAY;AACvB,OAAO,IAAI,SAAS,UAAU;AAC9B,OAAO,IAAI,aAAa,cAAc;AACtC,OAAO,IAAI,iBAAiB,kBAAkB;AAC9C,OAAO,IAAI,cAAc,eAAe;AACxC,OAAO,IAAI,WAAW,YAAY;AAClC,OAAO,IAAI,UAAU,WAAW;AAChC,OAAO,IAAI,UAAU,WAAW;AAEhC,IAAO,iBAAQ;",
+  "names": []
+}

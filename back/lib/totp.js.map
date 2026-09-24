@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/lib/totp.ts"],
+  "sourcesContent": ["import { generateSecret as otpGenerateSecret, generateSync, verifySync, generateURI } from \"otplib\";\nimport QRCode from \"qrcode\";\n\nconst APP_NAME = \"SecureBank\";\n\nexport function generateTotpSecret(): string {\n  return otpGenerateSecret();\n}\n\nexport function verifyTotpCode(secret: string, code: string): boolean {\n  try {\n    const result = verifySync({ secret, token: code, strategy: \"totp\" });\n    return result === true;\n  } catch {\n    return false;\n  }\n}\n\nexport async function getTotpQrCode(email: string, secret: string): Promise<string> {\n  const uri = generateURI({ strategy: \"totp\", issuer: APP_NAME, label: email, secret });\n  return QRCode.toDataURL(uri);\n}\n"],
+  "mappings": "AAAA,SAAS,kBAAkB,mBAAiC,YAAY,mBAAmB;AAC3F,OAAO,YAAY;AAEnB,MAAM,WAAW;AAEV,SAAS,qBAA6B;AAC3C,SAAO,kBAAkB;AAC3B;AAEO,SAAS,eAAe,QAAgB,MAAuB;AACpE,MAAI;AACF,UAAM,SAAS,WAAW,EAAE,QAAQ,OAAO,MAAM,UAAU,OAAO,CAAC;AACnE,WAAO,WAAW;AAAA,EACpB,QAAQ;AACN,WAAO;AAAA,EACT;AACF;AAEA,eAAsB,cAAc,OAAe,QAAiC;AAClF,QAAM,MAAM,YAAY,EAAE,UAAU,QAAQ,QAAQ,UAAU,OAAO,OAAO,OAAO,CAAC;AACpF,SAAO,OAAO,UAAU,GAAG;AAC7B;",
+  "names": []
+}

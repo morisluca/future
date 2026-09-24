@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/routes/health.ts"],
+  "sourcesContent": ["import { Router, type IRouter } from \"express\";\nimport { HealthCheckResponse } from \"../api-zod/src/index.js\";\nimport { db, siteSettingsTable } from \"../db/index.js\";\n\nconst router: IRouter = Router();\n\nrouter.get(\"/healthz\", (_req, res) => {\n  const data = HealthCheckResponse.parse({ status: \"ok\" });\n  res.json(data);\n});\n\nrouter.get(\"/settings\", async (req, res) => {\n  try {\n    const rows = await db.select().from(siteSettingsTable);\n    const settings: Record<string, string> = {};\n    for (const row of rows) settings[row.key] = row.value;\n    res.json({ settings });\n  } catch (err) {\n    req.log.error({ err }, \"Get public settings error\");\n    res.status(500).json({ error: \"Failed to fetch settings\" });\n  }\n});\n\nexport default router;\n"],
+  "mappings": "AAAA,SAAS,cAA4B;AACrC,SAAS,2BAA2B;AACpC,SAAS,IAAI,yBAAyB;AAEtC,MAAM,SAAkB,OAAO;AAE/B,OAAO,IAAI,YAAY,CAAC,MAAM,QAAQ;AACpC,QAAM,OAAO,oBAAoB,MAAM,EAAE,QAAQ,KAAK,CAAC;AACvD,MAAI,KAAK,IAAI;AACf,CAAC;AAED,OAAO,IAAI,aAAa,OAAO,KAAK,QAAQ;AAC1C,MAAI;AACF,UAAM,OAAO,MAAM,GAAG,OAAO,EAAE,KAAK,iBAAiB;AACrD,UAAM,WAAmC,CAAC;AAC1C,eAAW,OAAO,KAAM,UAAS,IAAI,GAAG,IAAI,IAAI;AAChD,QAAI,KAAK,EAAE,SAAS,CAAC;AAAA,EACvB,SAAS,KAAK;AACZ,QAAI,IAAI,MAAM,EAAE,IAAI,GAAG,2BAA2B;AAClD,QAAI,OAAO,GAAG,EAAE,KAAK,EAAE,OAAO,2BAA2B,CAAC;AAAA,EAC5D;AACF,CAAC;AAED,IAAO,iBAAQ;",
+  "names": []
+}

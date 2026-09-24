@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/db/src/schema/settings.ts"],
+  "sourcesContent": ["import { pgTable, text, serial, timestamp } from \"drizzle-orm/pg-core\";\n\nexport const siteSettingsTable = pgTable(\"site_settings\", {\n  id: serial(\"id\").primaryKey(),\n  key: text(\"key\").notNull().unique(),\n  value: text(\"value\").notNull().default(\"\"),\n  updatedAt: timestamp(\"updated_at\").notNull().defaultNow(),\n});\n\nexport type SiteSetting = typeof siteSettingsTable.$inferSelect;\n"],
+  "mappings": "AAAA,SAAS,SAAS,MAAM,QAAQ,iBAAiB;AAE1C,MAAM,oBAAoB,QAAQ,iBAAiB;AAAA,EACxD,IAAI,OAAO,IAAI,EAAE,WAAW;AAAA,EAC5B,KAAK,KAAK,KAAK,EAAE,QAAQ,EAAE,OAAO;AAAA,EAClC,OAAO,KAAK,OAAO,EAAE,QAAQ,EAAE,QAAQ,EAAE;AAAA,EACzC,WAAW,UAAU,YAAY,EAAE,QAAQ,EAAE,WAAW;AAC1D,CAAC;",
+  "names": []
+}

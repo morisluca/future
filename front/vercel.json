@@ -1,0 +1,14 @@
+{
+  "buildCommand": "pnpm install && pnpm --filter @workspace/banking-app run build",
+  "outputDirectory": "artifacts/banking-app/dist/public",
+  "installCommand": "npm install -g pnpm && pnpm install",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}

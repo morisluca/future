@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/db/schema/cards.ts"],
+  "sourcesContent": ["import { pgTable, serial, integer, text, timestamp, pgEnum } from \"drizzle-orm/pg-core\";\r\n\r\nexport const cardStatusEnum = pgEnum(\"card_status\", [\"pending\", \"active\", \"frozen\", \"suspended\", \"deleted\"]);\r\n\r\nexport const cardsTable = pgTable(\"cards\", {\r\n  id: serial(\"id\").primaryKey(),\r\n  userId: integer(\"user_id\").notNull(),\r\n  cardNumber: text(\"card_number\"),\r\n  cardType: text(\"card_type\").notNull(),\r\n  status: cardStatusEnum(\"status\").notNull().default(\"pending\"),\r\n  holderName: text(\"holder_name\"),\r\n  shippingAddress: text(\"shipping_address\"),\r\n  createdAt: timestamp(\"created_at\").notNull().defaultNow(),\r\n  updatedAt: timestamp(\"updated_at\").notNull().defaultNow(),\r\n});\r\n\r\nexport type Card = typeof cardsTable.$inferSelect;\r\n"],
+  "mappings": "AAAA,SAAS,SAAS,QAAQ,SAAS,MAAM,WAAW,cAAc;AAE3D,MAAM,iBAAiB,OAAO,eAAe,CAAC,WAAW,UAAU,UAAU,aAAa,SAAS,CAAC;AAEpG,MAAM,aAAa,QAAQ,SAAS;AAAA,EACzC,IAAI,OAAO,IAAI,EAAE,WAAW;AAAA,EAC5B,QAAQ,QAAQ,SAAS,EAAE,QAAQ;AAAA,EACnC,YAAY,KAAK,aAAa;AAAA,EAC9B,UAAU,KAAK,WAAW,EAAE,QAAQ;AAAA,EACpC,QAAQ,eAAe,QAAQ,EAAE,QAAQ,EAAE,QAAQ,SAAS;AAAA,EAC5D,YAAY,KAAK,aAAa;AAAA,EAC9B,iBAAiB,KAAK,kBAAkB;AAAA,EACxC,WAAW,UAAU,YAAY,EAAE,QAAQ,EAAE,WAAW;AAAA,EACxD,WAAW,UAAU,YAAY,EAAE,QAAQ,EAAE,WAAW;AAC1D,CAAC;",
+  "names": []
+}

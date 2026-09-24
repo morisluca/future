@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/lib/logger.ts"],
+  "sourcesContent": ["import pino from \"pino\";\n\nconst isProduction = process.env.NODE_ENV === \"production\";\n\nexport const logger = pino({\n  level: process.env.LOG_LEVEL ?? \"info\",\n  redact: [\n    \"req.headers.authorization\",\n    \"req.headers.cookie\",\n    \"res.headers['set-cookie']\",\n  ],\n  ...(isProduction\n    ? {}\n    : {\n        transport: {\n          target: \"pino-pretty\",\n          options: { colorize: true },\n        },\n      }),\n});\n"],
+  "mappings": "AAAA,OAAO,UAAU;AAEjB,MAAM,eAAe,QAAQ,IAAI,aAAa;AAEvC,MAAM,SAAS,KAAK;AAAA,EACzB,OAAO,QAAQ,IAAI,aAAa;AAAA,EAChC,QAAQ;AAAA,IACN;AAAA,IACA;AAAA,IACA;AAAA,EACF;AAAA,EACA,GAAI,eACA,CAAC,IACD;AAAA,IACE,WAAW;AAAA,MACT,QAAQ;AAAA,MACR,SAAS,EAAE,UAAU,KAAK;AAAA,IAC5B;AAAA,EACF;AACN,CAAC;",
+  "names": []
+}

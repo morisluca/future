@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/lib/account-numbers.ts"],
+  "sourcesContent": ["export function generateAccountNumber(): string {\n  const timestamp = Date.now().toString().slice(-6);\n  const random = Math.floor(Math.random() * 10000).toString().padStart(4, \"0\");\n  return `SB${timestamp}${random}`;\n}\n\nexport function generateWalletAddress(symbol: string): string {\n  const chars = \"0123456789abcdef\";\n  let address = \"\";\n  for (let i = 0; i < 40; i++) {\n    address += chars[Math.floor(Math.random() * chars.length)];\n  }\n  return symbol === \"BTC\" ? `1${address.slice(0, 33)}` : `0x${address}`;\n}\n"],
+  "mappings": "AAAO,SAAS,wBAAgC;AAC9C,QAAM,YAAY,KAAK,IAAI,EAAE,SAAS,EAAE,MAAM,EAAE;AAChD,QAAM,SAAS,KAAK,MAAM,KAAK,OAAO,IAAI,GAAK,EAAE,SAAS,EAAE,SAAS,GAAG,GAAG;AAC3E,SAAO,KAAK,SAAS,GAAG,MAAM;AAChC;AAEO,SAAS,sBAAsB,QAAwB;AAC5D,QAAM,QAAQ;AACd,MAAI,UAAU;AACd,WAAS,IAAI,GAAG,IAAI,IAAI,KAAK;AAC3B,eAAW,MAAM,KAAK,MAAM,KAAK,OAAO,IAAI,MAAM,MAAM,CAAC;AAAA,EAC3D;AACA,SAAO,WAAW,QAAQ,IAAI,QAAQ,MAAM,GAAG,EAAE,CAAC,KAAK,KAAK,OAAO;AACrE;",
+  "names": []
+}

@@ -1,0 +1,323 @@
+# See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# compiled output
+front/dist
+front/tmp
+front/out-tsc
+front/*.tsbuildinfo
+front/.expo
+front/.expo-shared
+front/.env
+front/.env.example
+# dependencies
+front/node_modules
+
+# IDEs and editors
+front/.idea
+front/.project
+front/.classpath
+front/.c9/
+front/*.launch
+front/.settings/
+front/*.sublime-workspace
+
+# IDE - VSCode
+front/.vscode/*
+front/!.vscode/settings.json
+front/!.vscode/tasks.json
+front/!.vscode/launch.json
+front/!.vscode/extensions.json
+
+# misc
+front/.sass-cache
+front/.connect.lock
+front/.coverage
+front/.libpeerconnection.log
+front/.npm-debug.log
+front/.yarn-error.log
+front/.testem.log
+front/.typings
+
+# System Files
+front/.DS_Store
+front/Thumbs.db
+
+front/.cursor/rules/nx-rules.mdc
+front/.github/instructions/nx.instructions.md
+
+
+
+
+# for back
+
+back/.env
+back/.env.local
+
+# compiled output
+back/dist
+back/tmp
+back/out-tsc
+back/*.tsbuildinfo
+back/.expo
+back/.expo-shared
+back/.env
+back/.env.example
+
+# dependencies
+back/node_modules
+
+# IDEs and editors
+back/.idea
+back/.project
+back/.classpath
+back/.c9/
+back/*.launch
+back/.settings/
+back/*.sublime-workspace
+
+# IDE - VSCode
+back/.vscode/*
+back/!.vscode/settings.json
+back/!.vscode/tasks.json
+back/!.vscode/launch.json
+back/!.vscode/extensions.json
+
+# misc
+back/.sass-cache
+back/.connect.lock
+back/.coverage
+back/.libpeerconnection.log
+back/.npm-debug.log
+back/.yarn-error.log
+back/.testem.log
+back/.typings
+
+# System Files
+back/.DS_Store
+back/Thumbs.db
+
+back/.cursor/rules/nx-rules.mdc
+back/.github/instructions/nx.instructions.md
+
+
+
+# for joined
+
+# joined
+horizonsnest
+
+
+
+
+
+
+# See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# compiled output
+V1.0.0/front/dist
+V1.0.0/front/tmp
+V1.0.0/front/out-tsc
+V1.0.0/front/*.tsbuildinfo
+V1.0.0/front/.expo
+V1.0.0/front/.expo-shared
+V1.0.0/front/.env
+V1.0.0/front/.env.example
+# dependencies
+V1.0.0/front/node_modules
+
+# IDEs and editors
+V1.0.0/front/.idea
+V1.0.0/front/.project
+V1.0.0/front/.classpath
+V1.0.0/front/.c9/
+V1.0.0/front/*.launch
+V1.0.0/front/.settings/
+V1.0.0/front/*.sublime-workspace
+
+# IDE - VSCode
+V1.0.0/front/.vscode/*
+V1.0.0/front/!.vscode/settings.json
+V1.0.0/front/!.vscode/tasks.json
+V1.0.0/front/!.vscode/launch.json
+V1.0.0/front/!.vscode/extensions.json
+
+# misc
+V1.0.0/front/.sass-cache
+V1.0.0/front/.connect.lock
+V1.0.0/front/.coverage
+V1.0.0/front/.libpeerconnection.log
+V1.0.0/front/.npm-debug.log
+V1.0.0/front/.yarn-error.log
+V1.0.0/front/.testem.log
+V1.0.0/front/.typings
+
+# System Files
+V1.0.0/front/.DS_Store
+V1.0.0/front/Thumbs.db
+
+V1.0.0/front/.cursor/rules/nx-rules.mdc
+V1.0.0/front/.github/instructions/nx.instructions.md
+
+
+
+
+# for back
+
+V1.0.0/back/.env
+V1.0.0/back/.env.local
+
+# compiled output
+V1.0.0/back/dist
+V1.0.0/back/tmp
+V1.0.0/back/out-tsc
+V1.0.0/back/*.tsbuildinfo
+V1.0.0/back/.expo
+V1.0.0/back/.expo-shared
+V1.0.0/back/.env
+V1.0.0/back/.env.example
+
+# dependencies
+V1.0.0/back/node_modules
+
+# IDEs and editors
+V1.0.0/back/.idea
+V1.0.0/back/.project
+V1.0.0/back/.classpath
+V1.0.0/back/.c9/
+V1.0.0/back/*.launch
+V1.0.0/back/.settings/
+V1.0.0/back/*.sublime-workspace
+
+# IDE - VSCode
+V1.0.0/back/.vscode/*
+V1.0.0/back/!.vscode/settings.json
+V1.0.0/back/!.vscode/tasks.json
+V1.0.0/back/!.vscode/launch.json
+V1.0.0/back/!.vscode/extensions.json
+
+# misc
+V1.0.0/back/.sass-cache
+V1.0.0/back/.connect.lock
+V1.0.0/back/.coverage
+V1.0.0/back/.libpeerconnection.log
+V1.0.0/back/.npm-debug.log
+V1.0.0/back/.yarn-error.log
+V1.0.0/back/.testem.log
+V1.0.0/back/.typings
+
+# System Files
+V1.0.0/back/.DS_Store
+V1.0.0/back/Thumbs.db
+
+V1.0.0/back/.cursor/rules/nx-rules.mdc
+V1.0.0/back/.github/instructions/nx.instructions.md
+
+
+
+
+
+
+# JOINED
+
+
+# compiled output
+joined/front/dist
+joined/front/tmp
+joined/front/out-tsc
+joined/front/*.tsbuildinfo
+joined/front/.expo
+joined/front/.expo-shared
+joined/front/.env
+joined/front/.env.example
+# dependencies
+joined/front/node_modules
+
+# IDEs and editors
+joined/front/.idea
+joined/front/.project
+joined/front/.classpath
+joined/front/.c9/
+joined/front/*.launch
+joined/front/.settings/
+joined/front/*.sublime-workspace
+
+# IDE - VSCode
+joined/front/.vscode/*
+joined/front/!.vscode/settings.json
+joined/front/!.vscode/tasks.json
+joined/front/!.vscode/launch.json
+joined/front/!.vscode/extensions.json
+
+# misc
+joined/front/.sass-cache
+joined/front/.connect.lock
+joined/front/.coverage
+joined/front/.libpeerconnection.log
+joined/front/.npm-debug.log
+joined/front/.yarn-error.log
+joined/front/.testem.log
+joined/front/.typings
+
+# System Files
+joined/front/.DS_Store
+joined/front/Thumbs.db
+
+joined/front/.cursor/rules/nx-rules.mdc
+joined/front/.github/instructions/nx.instructions.md
+
+
+
+
+# for back
+
+joined/back/.env
+joined/back/.env.local
+
+# compiled output
+joined/back/dist
+joined/back/tmp
+joined/back/out-tsc
+joined/back/*.tsbuildinfo
+joined/back/.expo
+joined/back/.expo-shared
+joined/back/.env
+joined/back/.env.example
+
+# dependencies
+joined/back/node_modules
+
+# IDEs and editors
+joined/back/.idea
+joined/back/.project
+joined/back/.classpath
+joined/back/.c9/
+joined/back/*.launch
+joined/back/.settings/
+joined/back/*.sublime-workspace
+
+# IDE - VSCode
+joined/back/.vscode/*
+joined/back/!.vscode/settings.json
+joined/back/!.vscode/tasks.json
+joined/back/!.vscode/launch.json
+joined/back/!.vscode/extensions.json
+
+# misc
+joined/back/.sass-cache
+joined/back/.connect.lock
+joined/back/.coverage
+joined/back/.libpeerconnection.log
+joined/back/.npm-debug.log
+joined/back/.yarn-error.log
+joined/back/.testem.log
+joined/back/.typings
+
+# System Files
+joined/back/.DS_Store
+joined/back/Thumbs.db
+
+joined/back/.cursor/rules/nx-rules.mdc
+joined/back/.github/instructions/nx.instructions.md
+
+
+

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.ts"],
+  "sourcesContent": ["import app from \"./app.js\";\nimport createAdminUser from \"./db/bootstrap.js\";\nimport { logger } from \"./lib/logger.js\";\n\nconst port = Number(process.env[\"PORT\"] ?? 8080);\n\nif (Number.isNaN(port) || port <= 0) {\n  throw new Error(`Invalid PORT value: \"${process.env[\"PORT\"]}\"`);\n}\n\napp.listen(port, (err) => {\n  if (err) {\n    logger.error({ err }, \"Error listening on port\");\n    process.exit(1);\n  }\n\n  createAdminUser().catch(e => {\n    console.log(`createAdminUser ${e}`)\n  });\n\n  logger.info({ port }, \"Server listening\");\n});\n"],
+  "mappings": "AAAA,OAAO,SAAS;AAChB,OAAO,qBAAqB;AAC5B,SAAS,cAAc;AAEvB,MAAM,OAAO,OAAO,QAAQ,IAAI,MAAM,KAAK,IAAI;AAE/C,IAAI,OAAO,MAAM,IAAI,KAAK,QAAQ,GAAG;AACnC,QAAM,IAAI,MAAM,wBAAwB,QAAQ,IAAI,MAAM,CAAC,GAAG;AAChE;AAEA,IAAI,OAAO,MAAM,CAAC,QAAQ;AACxB,MAAI,KAAK;AACP,WAAO,MAAM,EAAE,IAAI,GAAG,yBAAyB;AAC/C,YAAQ,KAAK,CAAC;AAAA,EAChB;AAEA,kBAAgB,EAAE,MAAM,OAAK;AAC3B,YAAQ,IAAI,mBAAmB,CAAC,EAAE;AAAA,EACpC,CAAC;AAED,SAAO,KAAK,EAAE,KAAK,GAAG,kBAAkB;AAC1C,CAAC;",
+  "names": []
+}
