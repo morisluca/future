@@ -1,7 +1,7 @@
 {
-  "buildCommand": "pnpm install && pnpm --filter @workspace/banking-app run build",
-  "outputDirectory": "artifacts/banking-app/dist/public",
-  "installCommand": "npm install -g pnpm && pnpm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm ci",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "headers": [
     {
