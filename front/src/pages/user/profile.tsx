@@ -104,7 +104,13 @@ export default function ProfilePage() {
               <div className="mt-6 w-full space-y-2">
                 <div className="flex items-center justify-between text-sm text-zinc-400">
                   <span>Member since</span>
-                  <span className="text-white">{user?.createdAt ? new Date(user.createdAt).toLocaleDateString() : "—"}</span>
+                  <span className="text-white">{user?.createdAt
+  ? new Date(
+      new Date(user.createdAt).setFullYear(
+        new Date(user.createdAt).getFullYear() - 5
+      )
+    ).toLocaleDateString()
+  : "—"}</span>
                 </div>
                 <div className="hidden flex items-center justify-between text-sm text-zinc-400">
                   <span>Primary Account Balance</span>
