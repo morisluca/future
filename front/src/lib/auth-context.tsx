@@ -45,7 +45,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const logout = useCallback(() => {
     clearAuthSession();
     setTokenState(null);
-    window.location.href = "/en/login";
+    window.location.href = "/login";
   }, []);
 
   const { data: user, isLoading: isUserLoading, isError, refetch } = useGetMe({
