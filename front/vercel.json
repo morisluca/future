@@ -2,7 +2,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm ci",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "rewrites": [{ "source": "/((?!assets/|images/|favicon.png).*)", "destination": "/index.html" }],
   "headers": [
     {
       "source": "/assets/(.*)",

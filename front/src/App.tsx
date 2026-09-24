@@ -147,7 +147,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <WouterRouter base="/en">
+        <WouterRouter>
           <AuthProvider>
           <div id="google_translate_element" style={{ display: "none" }} />
             <Router />
