@@ -365,7 +365,7 @@ export default function TransfersPage() {
 
               <Field label="Amount (CNY)">
                 <div className="relative">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500">¥</span>
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500">$</span>
                   <Input type="number" step="0.01" className={cn(inputCls, "pl-8")} placeholder="0.00" value={form.amount} onChange={setField("amount")} />
                 </div>
               </Field>
@@ -458,9 +458,9 @@ export default function TransfersPage() {
                   </select>
                 </Field>
 
-                <Field label="Amount Sent (CNY)">
+                <Field label="Amount Sent (USD)">
                   <div className="relative">
-                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500">¥</span>
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500">$</span>
                     <Input type="number" step="0.01" className={cn(inputCls, "pl-8")} placeholder="0.00" value={form.amount} onChange={setField("amount")} />
                   </div>
                 </Field>
@@ -501,9 +501,9 @@ export default function TransfersPage() {
                 </select>
               </Field>
 
-              <Field label="Amount (CNY)">
+              <Field label="Amount (USD)">
                 <div className="relative">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500">¥</span>
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500">$</span>
                   <Input type="number" step="0.01" className={cn(inputCls, "pl-8")} placeholder="0.00" value={form.amount} onChange={setField("amount")} />
                 </div>
               </Field>

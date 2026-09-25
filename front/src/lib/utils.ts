@@ -5,9 +5,9 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function formatCurrency(amount: number | undefined | null, currency = "CNY") {
-  if (amount === undefined || amount === null) return "¥0.00";
-  return new Intl.NumberFormat("zh-CN", {
+export function formatCurrency(amount: number | undefined | null, currency = "USD") {
+  if (amount === undefined || amount === null) return "$0.00";
+  return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: currency,
     minimumFractionDigits: 2,
@@ -17,7 +17,7 @@ export function formatCurrency(amount: number | undefined | null, currency = "CN
 
 export function formatCrypto(amount: number | undefined | null, symbol: string) {
   if (amount === undefined || amount === null) return `0.0000 ${symbol}`;
-  return new Intl.NumberFormat("zh-CN", {
+  return new Intl.NumberFormat("en-US", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 6,
   }).format(amount) + ` ${symbol}`;
@@ -25,7 +25,7 @@ export function formatCrypto(amount: number | undefined | null, symbol: string) 
 
 export function formatNumber(amount: number | undefined | null) {
   if (amount === undefined || amount === null) return "0";
-  return new Intl.NumberFormat("zh-CN", {
+  return new Intl.NumberFormat("en-US", {
     notation: "compact",
     compactDisplay: "short"
   }).format(amount);

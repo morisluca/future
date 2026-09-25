@@ -38,14 +38,14 @@ const brandGlow: Record<string, string> = {
 const formatCardNumber = (number: string) => {
   const digits = number.replace(/\D/g, "");
   return digits.length === 16
-    ? digits.replace(/(.{4})/g, "¥1 ").trim()
+    ? digits.replace(/(.{4})/g, "$1 ").trim()
     : number;
 };
 
-export function VirtualCard({ accountType, balance, accountNumber, holderName, currency = "CN¥", expiry = "12/30", cvc = "123", className }: VirtualCardProps) {
+export function VirtualCard({ accountType, balance, accountNumber, holderName, currency = "USD", expiry = "12/30", cvc = "123", className }: VirtualCardProps) {
   const gradient = brandStyles[accountType.toLowerCase()] ?? brandStyles.checking;
   const glow = brandGlow[accountType.toLowerCase()] ?? brandGlow.checking;
-  const formatted = new Intl.NumberFormat("zh-CN", { style: "currency", currency }).format(balance);
+  const formatted = new Intl.NumberFormat("en-US", { style: "currency", currency }).format(balance);
   const type = accountType.charAt(0).toUpperCase() + accountType.slice(1);
   const formattedNumber = formatCardNumber(accountNumber || "0000000000000000");
   const masked = `•••• •••• •• ${accountNumber.slice(-6)}`;

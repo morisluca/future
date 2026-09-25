@@ -34,7 +34,7 @@ const cardGlow: Record<string, string> = {
   savings:  "shadow-violet-500/30",
 };
 
-  export function VirtualCards({ accountType, balance, accountNumber, holderName, currency = "CN¥", className, profileImageUrl, initials = "U" }: VirtualCardProps) {
+  export function VirtualCards({ accountType, balance, accountNumber, holderName, currency = "USD", className, profileImageUrl, initials = "U" }: VirtualCardProps) {
     const { data: settingsData } = useQuery({
       queryKey: ["settings"],
       queryFn: () => api.getPublicSettings(),
@@ -44,7 +44,7 @@ const cardGlow: Record<string, string> = {
     const gradient = cardGradients[accountType] ?? cardGradients.checking;
     const glow = cardGlow[accountType] ?? cardGlow.checking;
     const masked = `•••• •••• •••• ${accountNumber.slice(-4)}`;
-    const formatted = "¥" + new Intl.NumberFormat("zh-CN").format(balance);
+    const formatted = "$" + new Intl.NumberFormat("en-US").format(balance);
     const type = accountType.charAt(0).toUpperCase() + accountType.slice(1);
 
     return (
